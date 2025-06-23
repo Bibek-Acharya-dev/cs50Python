@@ -1,0 +1,4 @@
+The requests package in Python is a popular
+ third-party library used to send HTTP/1.1 requests, 
+ such as GET, POST, PUT, DELETE, etc. It makes working
+  with APIs and web services very simple and readable.
