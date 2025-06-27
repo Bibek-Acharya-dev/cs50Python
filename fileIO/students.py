@@ -15,6 +15,11 @@ with open("names.csv") as file:
 def getName(student):
     return student["name"]
        
-for student in sorted(students,key=getName):
-    print(f"{student['name']} is in {student['house']}")       
+# for student in sorted(students,key=getName):
+#     print(f"{student['name']} is in {student['house']}") 
+
+
+# using lambda funtion which doesn't need an external function for accessing key
+for student in sorted(students,key=lambda student: student["name"],reverse=True):
+    print(f"{student['name']} is in {student['house']}")  
        
