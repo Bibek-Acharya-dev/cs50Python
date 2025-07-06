@@ -2,11 +2,15 @@ import csv
 
 students=[]
 
+name=input("enter your name: ")
+house=input("enter your house: ")
 
 
 with open("names.csv","a") as file:
-    writer=csv.writer(file)  
-    writer.writerow(["bibek","jhapa"])
+    writer=csv.DictWriter(file,fieldnames=["name","house"])  
+    writer.writerow({"name": name,"house":house})
+
+    
 
 with open("names.csv") as file:
     reader=csv.DictReader(file)
